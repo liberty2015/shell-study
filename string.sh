@@ -3,7 +3,7 @@
 
 # 定义
 
-# 双引号引用
+# 双引号引用：可以使用变量，并且能对转义字符进行转义。
 str="I am king of the world!"
 # 单引号引用：保留字符串的所有字符的字面意义，单引号中不允许包含单引号，不会对转义字符进行转义
 str1='I am king of the world!'
@@ -13,6 +13,15 @@ str3="jack say 'I am king of the world!'"
 
 # 长度
 echo "str length: ${#str}"
+
+# 拼接字符串
+your_name="Ubuntu"
+greeting="Hello,"$your_name"!"
+greeting_1="Hello,${your_name}"
+echo $greeting $greeting_1
+greeting_2='Hello.'${your_name}'!'
+greeting_3='Hello'.${your_name}"!"
+echo $greeting_2 $greeting_3
 
 # 字符串截取
 
