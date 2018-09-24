@@ -109,8 +109,14 @@ cat log
 # command << delimiter
 #   document
 # delimiter
+# 将两个delimiter之间的内容传递command作为输入参数
 cat << EOF > output.sh
 echo "hello"
 echo "world"
 EOF
+# EOF只是一个标识，可以换成任意的合法字符
+# 作为结尾的delimiter一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格
+# 作为起始的delimiter前后的空格会被省略掉
 cat output.sh
+
+cat << EOF > out
