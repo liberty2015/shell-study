@@ -119,4 +119,10 @@ EOF
 # 作为起始的delimiter前后的空格会被省略掉
 cat output.sh
 
-cat << EOF > out
+# 在不重定向输出的情况下默认输出到stdout
+cat << EOF 
+
+    hehe\
+    haha
+
+EOF
