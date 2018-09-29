@@ -49,7 +49,7 @@ echo $total,$?;
 unset -f fSum
 fSum 6 7
 
-# 8. 
+# 8. 定义局部变量：local 变量名=值，它的修改不会影响函数外部相同变量的值。
 echo $(uname)
 declare num=1000
 
@@ -70,3 +70,6 @@ echo $?;
 echo $num;
 testVar;
 echo $num;
+
+# 9. 调用另一个脚步定义的函数，命令格式: source xxx.sh;函数名 参数
+source out.sh;success "Yeah!\n"
