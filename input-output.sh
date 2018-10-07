@@ -45,6 +45,8 @@ echo "$month25"
 # 输出换行
 echo -e "OK!\n" # 在bash中\n没有以换行输出，还是输出为"\n"，但是sh则会输出为换行。 但添加-e 启用换行，bash也能输出换行
 echo "It is a test."
+echo -n "OK!" #不输出尾随换行符
+echo
 # 输出不换行
 echo -e "OK!\c"
 echo "It is a test."

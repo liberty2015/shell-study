@@ -328,3 +328,8 @@ echo "obase=10;ibase=2;$abc"|bc
 ### bc计算平方和平方根
 echo "2^10"|bc
 echo "sqrt(100)"|bc
+### 浮点数比较
+if [ $(echo "1.5 > 1"|bc) -eq 1 ]
+then
+    echo "true"
+fi
